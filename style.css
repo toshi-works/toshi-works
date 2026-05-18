@@ -23,7 +23,7 @@ body {
 
 /* style.css に追加 */
 .spacer {
-  height: 1200px; /* あえて縦にめちゃくちゃ長い空白を作る */
+  height: 2200px; /* あえて縦にめちゃくちゃ長い空白を作る */
   background: linear-gradient(to bottom, #f4f7f6, #e2e8f0); /* グラデーション */
 }
 
