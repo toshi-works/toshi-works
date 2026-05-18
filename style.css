@@ -20,3 +20,11 @@ body {
 .test-button:hover {
   background-color: #0056b3; /* マウスを乗せたら暗くする */
 }
+
+/* style.css に追加 */
+.spacer {
+  height: 1200px; /* あえて縦にめちゃくちゃ長い空白を作る */
+  background: linear-gradient(to bottom, #f4f7f6, #e2e8f0); /* グラデーション */
+}
+
+
