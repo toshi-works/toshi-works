@@ -2,9 +2,134 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>私のGA4練習用サイト</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toshi-Works GA4練習サイト</title>
+    
+    <style>
+        /* 全体の見た目を整える基本ルール */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー（一番上のタイトル部分） */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #1e293b;
+        }
+
+        /* コンテンツを中央に寄せるための外枠 */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* セクション（コンテンツごとの塊） */
+        .section-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* カード形式のリンクボタン（GA4、Python用） */
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr; /* スマホの時は縦に並べる */
+            }
+        }
+
+        .content-card {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* マウスを乗せた時のアニメーション（GA4のクリックを誘う仕掛け） */
+        .content-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+
+        /* ロゴ画像のサイズを整える */
+        .logo-img {
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-weight: bold;
+            color: #2563eb;
+            font-size: 16px;
+        }
+
+        /* テキストリンク用のシンプルなボタン（目的、トップページ用） */
+        .link-btn {
+            display: inline-block;
+            background-color: #334155;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .link-btn:hover {
+            background-color: #1e293b;
+        }
+
+        .link-btn-secondary {
+            background-color: #94a3b8;
+        }
+
+        .link-btn-secondary:hover {
+            background-color: #64748b;
+        }
+    </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W32CDC7PDS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,25 +138,47 @@
 
   gtag('config', 'G-W32CDC7PDS');
 </script>
-
 </head>
-    <link rel="stylesheet" href="style.css">
 <body>
-    <h1>GA4の練習ページへようこそ！</h1>
-    <p>これはGitHub Pagesで作った、私だけの実験用ホームページです。</p>
-    <p>おすすめのサイト：<a href="https://www.google.com" target="_blank">
-        <button class="test-button">Googleを開く</button><br>
-    <button onclick="alert('ボタンがクリックされました！')">
-        <button class="test-button">ここをクリック！</button>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/li6FCoes5VE?si=okgZJiVHvVyGxH1L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p><a href="about/">🏢 会社概要ページを見に行く</a></p><!-- index.html の本文 -->
-<body>
-  <p>下にスクロールすると、GA4に「スクロール」のデータが飛びます。</p>
-    <!-- 縦長の空白エリア -->
-  <div class="spacer"></div>
-  
-  <p>★ここまで読まれたらスクロール成功！★</p>
-</body>
-    
+    <header>
+        <h1>Toshi-Works GA4練習サイト</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="section-box">
+            <h2 class="section-title">学習したコンテンツはこちら</h2>
+            
+            <div class="card-container">
+                <a href="https://toshi-works.github.io/toshi-works/ga4_contents" class="content-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg" alt="GA4 Logo" class="logo-img">
+                    <span class="card-text">GA4 コンテンツを見る</span>
+                </a>
+
+                <a href="https://toshi-works.github.io/toshi-works/python_contents" class="content-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="logo-img">
+                    <span class="card-text">Python コンテンツを見る</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">このサイトの目的</h2>
+            <p style="color: #64748b; font-size: 15px; margin-bottom: 20px;">
+                このウェブサイトの概要や、制作した目的について紹介しています。
+            </p>
+            <a href="https://toshi-works.github.io/toshi-works/about" class="link-btn">
+                目的ページへ遷移する
+            </a>
+        </div>
+
+        <div class="section-box" style="background: transparent; box-shadow: none; padding: 0;">
+            <a href="https://toshi-works.github.io/toshi-works/" class="link-btn link-btn-secondary">
+                トップページに戻る
+            </a>
+        </div>
+
+    </div>
+
 </body>
 </html>
