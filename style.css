@@ -12,20 +12,34 @@ body {
     line-height: 1.7;
 }
 
+/* ==========================================================================
+   1. 全体の共通ベース設定：ヘッダー画像背景版
+   ========================================================================== */
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 20px;
+    /* 📷 「header-bg.jpg」をご自身が用意した画像の名前に変えてください */
+    /* 画像をアップロードするまでは、スタイリッシュなグラデーションの仮画像が表示されます */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1200x300/1e3a8a/ffffff?text=');
+    
+    background-size: cover;      /* 画像をヘッダーの横幅いっぱいに綺麗に敷き詰める */
+    background-position: center;  /* 画像の中心を基準に配置する */
+    background-repeat: no-repeat;
+    
+    /* ヘッダーの縦幅（厚み）の調整 */
+    padding: 60px 20px;          /* 上下に60pxの広めの余白を作って、画像を見せます */
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    
+    /* 立体感のあるオシャレな影 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
-    color: #1e293b;
+    font-size: 28px;             /* 文字を少し大きめに */
+    color: #ffffff;              /* 💡 画像の上に載せるため、文字色を「白」に変えます */
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 文字の後ろに薄い影を入れて、画像と重なっても読みやすくします */
+    letter-spacing: 1px;         /* 文字の間隔を少し広げてオシャレに */
 }
-
 .container {
     max-width: 850px;
     margin: 40px auto;
