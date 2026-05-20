@@ -136,7 +136,7 @@ header h1 {
     .hero-img {
         height: 200px;
     }
-} /* 💡 修正箇所：スマホ用の閉じカッコを追加しました */
+}
 
 /* 5. お問い合わせページ専用：淡いブルーのボックス */
 .contact-section {
@@ -182,24 +182,81 @@ header h1 {
     margin-bottom: 20px;
     display: block;
 }
+
+.work-content-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .work-content-flex {
+        flex-direction: column;
+    }
+}
+
+.work-image-box {
+    flex: 1;
+    width: 100%;
+}
+
+.work-img {
+    width: 100%;
+    height: 220px; 
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    object-fit: cover; 
+    object-position: center; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.work-img:hover {
+    transform: scale(1.02);
+}
+
+/* 📱 スマホ用の画像サイズ */
+@media (max-width: 768px) {
+    .work-img {
+        height: 240px; 
+    }
+}
+
+.work-text-box {
+    flex: 1.3;
+    width: 100%;
+}
+
+.work-section-title {
+    font-size: 14px;
+    color: #1e3a8a;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    background-color: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
 /* ==========================================================================
    7. トップページ：学習コンテンツの横並び・カードリンク設定
    ========================================================================== */
 /* 2つのカードを横並びにする指示 */
 .content-flex-container {
     display: flex;
-    gap: 20px; /* カード同士の間隔 */
+    gap: 20px; 
     width: 100%;
 }
 
-/* 💡 一体化してクリックできるようにするカードの土台 */
+/* 一体化してクリックできるようにするカードの土台 */
 .content-card-link {
-    flex: 1; /* 2つのカードを同じ横幅で均等に分ける */
+    flex: 1; 
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 10px;
     overflow: hidden;
-    text-decoration: none; /* 文字の下線を消す */
+    text-decoration: none; 
     display: block;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
@@ -209,30 +266,30 @@ header h1 {
 .content-card-link:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
-    border-color: #3b82f6; /* 枠線がほんのり青くなる */
+    border-color: #3b82f6; 
 }
 
 /* カード内の画像の設定 */
 .content-card-img-box {
     width: 100%;
-    height: 160px; /* 画像の高さを揃える */
+    height: 160px; 
     overflow: hidden;
 }
 
 .content-card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 画像を枠に綺麗にフィットさせる */
+    object-fit: cover; 
 }
 
-/* 💡 画像の下の「文字列」のオシャレな装飾 */
+/* 画像の下の「文字列」のオシャレな装飾 */
 .content-card-text {
     padding: 15px;
     text-align: center;
     font-weight: bold;
     font-size: 15px;
-    color: #1e3a8a; /* リンクらしい青系の文字色 */
-    background-color: #f8fafc; /* 文字エリアの背景をほんのりグレーに */
+    color: #1e3a8a; 
+    background-color: #f8fafc; 
     border-top: 1px solid #e2e8f0;
     transition: background-color 0.3s;
 }
@@ -250,7 +307,6 @@ header h1 {
         gap: 15px;
     }
     .content-card-img-box {
-        height: 180px; /* スマホで見やすい高さに微調整 */
+        height: 180px; 
     }
 }
-.work-content-flex
