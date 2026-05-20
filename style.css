@@ -209,12 +209,26 @@ header h1 {
     width: 100%;
 }
 
+/* ==========================================================================
+   6. 実績ページ（Works）専用：画像サイズ統一版
+   ========================================================================== */
 .work-img {
     width: 100%;
-    height: auto;
+    
+    /* 💡 ここがポイント！縦幅を「220px」に固定します */
+    height: 220px; 
+    
     border-radius: 10px;
     border: 1px solid #e2e8f0;
-    object-fit: cover;
+    
+    /* 💡 超重要！これを書くことで、PythonやGA4の画像が
+       引き伸ばされてビヨーンと歪むのを防ぎ、3:2の比率の中に美しく収めます */
+    object-fit: cover; 
+    
+    /* 画像のどの部分を中心に持ってくるか（centerで基本はOKです） */
+    object-position: center; 
+    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     transition: transform 0.3s ease;
 }
 
@@ -222,6 +236,12 @@ header h1 {
     transform: scale(1.02);
 }
 
+/* 📱 スマホで見るときは、少しだけ縦幅を広げて見やすくします */
+@media (max-width: 768px) {
+    .work-img {
+        height: 240px; /* スマホの横幅に対してバランスの良い縦幅 */
+    }
+}
 .work-text-box {
     flex: 1.3;
     width: 100%;
