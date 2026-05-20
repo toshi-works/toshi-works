@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f8fafc;
-            color: #334155;
+            color: #334155; /* 基準となる黒（ダークグレー） */
             margin: 0;
             padding: 0;
             line-height: 1.7;
@@ -81,22 +81,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-radius: 4px;
         }
 
-        /* 連絡先セクション（前回同様、引き締まったネイビー） */
+        /* 💡 修正箇所：文字の色を他の本文と同じ「#334155」に完全統一しました */
         .contact-section {
-            background: #f0f5ff; 
+            background: #f0f5ff; /* 薄い青 */
             border: 1px solid #dbeafe; 
-            color: #334155; 
+            color: #334155;      /* 他の文章と同じ黒（ダークグレー）に統一 */
             border-radius: 12px;
             padding: 35px;
             text-align: center;
             margin-bottom: 30px;
         }
 
+        /* 💡 修正箇所：タイトルも同じ黒ベース（少し太文字）に統一しました */
         .contact-title {
             font-size: 18px;
             margin-top: 0;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #334155;      /* ここも同じ黒に統一 */
+            font-weight: bold;
         }
 
         /* 連絡先用のアクションボタン */
@@ -111,12 +113,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 15px;
             transition: all 0.3s ease;
             margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.15);
         }
 
         .contact-btn:hover {
             background-color: #2563eb;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 6px 12px rgba(59, 130, 246, 0.25);
         }
 
         /* フッターナビゲーション */
