@@ -1,16 +1,14 @@
-## Hi there 👋
+# Web Sandbox: GA4 & Python Integration
 
-<!--
-**toshi-works/toshi-works** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A clean-room simulation of a corporate website structure, built to explore the synergy between front-end tracking (GA4) and back-end analysis (Python).
 
-Here are some ideas to get you started:
+### Deployment
+* **URL:** [https://toshi-works.github.io](https://toshi-works.github.io)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Tech Stack & Objectives
+* **Frontend:** Structured HTML with a multi-page hierarchical flow.
+* **Analytics:** Advanced GA4 tracking for enhanced measurement events.
+* **Backend:** Utilizing Python for upcoming data pipelines and analytics automation.
+
+---
+Managed by toshi-works. Keep coding, keep learning.
