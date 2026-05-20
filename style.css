@@ -1,30 +1,223 @@
-/* style.css */
+/* ==========================================================================
+   Toshi-Works 共通スタイルシート（style.css）
+   ========================================================================== */
+
+/* 1. 全体の共通ベース設定 */
 body {
-  font-family: sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
-  padding: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
 }
 
-/* 計測テスト用のボタン */
-.test-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-.test-button:hover {
-  background-color: #0056b3; /* マウスを乗せたら暗くする */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #1e293b;
 }
 
-/* style.css に追加 */
-.spacer {
-  height: 2200px; /* あえて縦にめちゃくちゃ長い空白を作る */
-  background: linear-gradient(to bottom, #f4f7f6, #e2e8f0); /* グラデーション */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
+/* 2. 基本のボックス（セクション・ストーリー共通） */
+.section-box, .story-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
 
+.section-title, .page-title {
+    font-size: 22px;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* ハイライト文字 */
+.highlight {
+    font-weight: bold;
+    color: #1e3a8a;
+    background-color: #eff6ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 箇条書きリスト */
+.skill-list, .work-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.skill-list li, .work-list li {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+/* 3. ボタン関連 */
+.link-btn, .visit-btn, .contact-btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.15);
+    border: none;
+    cursor: pointer;
+}
+
+.link-btn:hover, .visit-btn:hover, .contact-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.25);
+}
+
+/* 戻るボタン（グレー） */
+.link-btn-secondary {
+    display: inline-block;
+    background-color: #94a3b8;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.link-btn-secondary:hover {
+    background-color: #64748b;
+}
+
+.footer-nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 4. トップページ専用：メインビジュアル */
+.top-hero-banner {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* 5. お問い合わせページ専用：淡いブルーのボックス */
+.contact-section {
+    background: #f0f5ff;
+    border: 1px solid #dbeafe; 
+    color: #334155;      
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-title {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #334155;
+    font-weight: bold;
+}
+
+/* 6. 実績ページ（Works）専用：オシャレな区切りのカード */
+.work-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    border-bottom: 4px solid #dbeafe; /* オシャレな分かれ目のライン */
+    position: relative;
+}
+
+.work-title {
+    font-size: 24px; 
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.work-date {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.work-content-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .work-content-flex {
+        flex-direction: column;
+    }
+}
+
+.work-image-box {
+    flex: 1;
+    width: 100%;
+}
+
+.work-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.work-img:hover {
+    transform: scale(1.02);
+}
+
+.work-text-box {
+    flex: 1.3;
+    width: 100%;
+}
+
+.work-section-title {
+    font-size: 14px;
+    color: #1e3a8a;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    background-color: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
