@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+     <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KW38LGGC');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python学習コンテンツ集 - Toshi-Works GA4練習サイト</title>
+    
+    <style>
+        /* 全体の共通デザイン（前回を踏襲） */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* セクション（塊）のデザイン */
+        .section-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #3b82f6; /* 左側に青いアクセント線を入れました */
+        }
+
+        /* リンク一覧のリストスタイル */
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .link-item {
+            margin-bottom: 15px;
+        }
+
+        .link-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* リンクボタンの共通デザイン */
+        .list-card {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #334155;
+            transition: all 0.2s ease;
+        }
+
+        /* マウスを乗せた時の動き（前回を踏襲し、クリックしたくなる仕掛けに） */
+        .list-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+            color: #2563eb;
+        }
+
+        /* アイコン（記号）の装飾 */
+        .icon {
+            font-size: 20px;
+            margin-right: 15px;
+            display: inline-block;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* リンクのテキスト部分 */
+        .link-text-container {
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 4px 0;
+        }
+
+        .link-desc {
+            font-size: 13px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* 矢印マーク */
+        .arrow {
+            color: #94a3b8;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .list-card:hover .arrow {
+            transform: translateX(4px);
+            color: #2563eb;
+        }
+
+        /* フッターボタン用の配置 */
+        .footer-nav {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .link-btn-secondary {
+            display: inline-block;
+            background-color: #94a3b8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .link-btn-secondary:hover {
+            background-color: #64748b;
+        }
+    </style>
+</head>
+<body>
+     <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW38LGGC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header>
+        <h1>Toshi-Works Pythonおすすめリンク集</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="section-box">
+            <h2 class="section-title">おすすめの学習記事</h2>
+            <ul class="link-list">
+                
+                <li class="link-item">
+                    <a href="https://example.com/article1" target="_blank" class="list-card">
+                        <span class="icon">📄</span>
+                        <div class="link-text-container">
+                            <p class="link-title">【GA4】初心者向け基本マニュアル</p>
+                            <p class="link-desc">公式ヘルプや、最初に見るべき基本的な用語解説の記事です。</p>
+                        </div>
+                        <span class="arrow">&gt;</span>
+                    </a>
+                </li>
+
+                <li class="link-item">
+                    <a href="https://example.com/article2" target="_blank" class="list-card">
+                        <span class="icon">📄</span>
+                        <div class="link-text-container">
+                            <p class="link-title">Pythonの基本文法まとめ</p>
+                            <p class="link-desc">変数や条件分岐など、基礎を復習するときに便利なリファレンスです。</p>
+                        </div>
+                        <span class="arrow">&gt;</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">おすすめの解説動画</h2>
+            <ul class="link-list">
+                
+                <li class="link-item">
+                    <a href="https://youtube.com/example1" target="_blank" class="list-card">
+                        <span class="icon">🎬</span>
+                        <div class="link-text-container">
+                            <p class="link-title">10分でわかるGA4設定講座</p>
+                            <p class="link-desc">動画で画面を見ながら学べる、非常にわかりやすい動画教材です。</p>
+                        </div>
+                        <span class="arrow">&gt;</span>
+                    </a>
+                </li>
+
+                <li class="link-item">
+                    <a href="https://youtube.com/example2" target="_blank" class="list-card">
+                        <span class="icon">🎬</span>
+                        <div class="link-text-container">
+                            <p class="link-title">Pythonによるデータ分析入門</p>
+                            <p class="link-desc">集めたデータを将来どう活用するか、イメージが膨らむ動画です。</p>
+                        </div>
+                        <span class="arrow">&gt;</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="footer-nav">
+            <a href="https://toshi-works.github.io/toshi-works/" class="link-btn-secondary">
+                ← トップページに戻る
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
