@@ -182,5 +182,75 @@ header h1 {
     margin-bottom: 20px;
     display: block;
 }
+/* ==========================================================================
+   7. トップページ：学習コンテンツの横並び・カードリンク設定
+   ========================================================================== */
+/* 2つのカードを横並びにする指示 */
+.content-flex-container {
+    display: flex;
+    gap: 20px; /* カード同士の間隔 */
+    width: 100%;
+}
 
+/* 💡 一体化してクリックできるようにするカードの土台 */
+.content-card-link {
+    flex: 1; /* 2つのカードを同じ横幅で均等に分ける */
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none; /* 文字の下線を消す */
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* カード全体にマウスを乗せたときの「浮き上がる」動き */
+.content-card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+    border-color: #3b82f6; /* 枠線がほんのり青くなる */
+}
+
+/* カード内の画像の設定 */
+.content-card-img-box {
+    width: 100%;
+    height: 160px; /* 画像の高さを揃える */
+    overflow: hidden;
+}
+
+.content-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を枠に綺麗にフィットさせる */
+}
+
+/* 💡 画像の下の「文字列」のオシャレな装飾 */
+.content-card-text {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #1e3a8a; /* リンクらしい青系の文字色 */
+    background-color: #f8fafc; /* 文字エリアの背景をほんのりグレーに */
+    border-top: 1px solid #e2e8f0;
+    transition: background-color 0.3s;
+}
+
+/* マウスを乗せたときに文字の背景を少し明るく */
+.content-card-link:hover .content-card-text {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+/* 📱 スマホで見るときは縦並びに自動切り替え */
+@media (max-width: 768px) {
+    .content-flex-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .content-card-img-box {
+        height: 180px; /* スマホで見やすい高さに微調整 */
+    }
+}
 .work-content-flex
