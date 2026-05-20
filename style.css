@@ -74,6 +74,7 @@ header h1 {
 /* 3. ボタン関連 */
 .link-btn, .visit-btn, .contact-btn {
     display: inline-block;
+    margin: 20px auto 10px auto;
     background-color: #3b82f6;
     color: #ffffff;
     text-decoration: none;
