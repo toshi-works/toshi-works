@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-     <!-- Google Tag Manager -->
+      <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -9,36 +9,187 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KW38LGGC');</script>
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
-    <title>会社概要 - マイ模擬企業</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Toshi-Works GA4練習サイト</title>
     
-   <!-- Google tag (gtag.js) -->
+    <style>
+        /* 全体の共通デザイン（ベースを踏襲） */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W32CDC7PDS"></script>
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
 
-<script>
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #1e293b;
+        }
 
-  window.dataLayer = window.dataLayer || [];
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-  function gtag(){dataLayer.push(arguments);}
+        /* メインの紹介文ボックス */
+        .story-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
 
-  gtag('js', new Date());
+        .page-title {
+            font-size: 22px;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 700;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
 
+        /* 箇条書き部分の調整 */
+        .skill-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
 
+        .skill-list li {
+            margin-bottom: 10px;
+            color: #475569;
+        }
 
-  gtag('config', 'G-W32CDC7PDS');
+        .highlight {
+            font-weight: bold;
+            color: #1e3a8a;
+            background-color: #eff6ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
 
-</script>
+        /* 連絡先セクション（前回同様、引き締まったネイビー） */
+        .contact-section {
+            background: #1e293b;
+            color: #f8fafc;
+            border-radius: 12px;
+            padding: 35px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-title {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        /* 連絡先用のアクションボタン */
+        .contact-btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .contact-btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* フッターナビゲーション */
+        .footer-nav {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .link-btn-secondary {
+            display: inline-block;
+            background-color: #94a3b8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .link-btn-secondary:hover {
+            background-color: #64748b;
+        }
+    </style>
 </head>
 <body>
      <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW38LGGC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <h1>会社概要 (About)</h1>
-    <p>ここは模擬企業の会社概要ページです。階層化の実験中！</p>
-    
-    <hr>
-    <!-- トップページに戻るためのリンク -->
-    <p><a href="../">← トップページへ戻る</a></p>
+    <header>
+        <h1>Toshi-Works GA4練習サイト</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="story-box">
+            <h2 class="page-title">このサイトの目的</h2>
+            
+            <p>
+                このウェブサイトは、私自身の<span class="highlight">「GA4（Google アナリティクス 4）」の計測とデータ活用を学ぶため</span>に作った練習用ページです。
+            </p>
+
+            <p>
+                現在は、日々勉強している以下の内容やアウトプットを、初心を忘れないようにここに少しずつまとめています。
+            </p>
+
+            <ul class="skill-list">
+                <li><strong>GA4：</strong> ボタンのクリックや画面のスクロールがどう計測されるかのテスト</li>
+                <li><strong>Python：</strong> データの処理や、日々の作業を自動化するための学習記録</li>
+                <li><strong>機械学習：</strong> 集めたデータを将来どう活かせるか、基礎からのチャレンジ</li>
+            </ul>
+
+            <p style="font-size: 14px; color: #64748b; margin-top: 20px;">
+                ※これらの学習内容を分かりやすく並べるために、HTML/CSSを使ったホームページ作りにも少しずつ触れながら、楽しく作業しています。
+            </p>
+        </div>
+
+        <div class="contact-section">
+            <h3 class="contact-title">お問い合わせ</h3>
+            <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 20px;">
+                学習に関する情報交換やご質問、メッセージなどはこちらからお気軽にお送りください。
+            </p>
+            
+            <a href="mailto:toshi.workonly@gmail.com" class="contact-btn">
+                連絡先へメッセージを送る
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <a href="index.html" class="link-btn-secondary">
+                ← トップページに戻る
+            </a>
+        </div>
+
+    </div>
 </body>
 </html>
