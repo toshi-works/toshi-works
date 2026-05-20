@@ -326,43 +326,61 @@ header h1 {
     }
 }
 /* ==========================================================================
-   8. トップページ最上部：ナビゲーションボタン横並び設定
+   8. トップページ最上部：ナビゲーションボタン横並び設定（極上モダン版）
    ========================================================================== */
 .top-nav-container {
     display: flex;
-    gap: 15px; /* ボタン同士の間隔 */
-    margin-bottom: 30px; /* 下のコンテンツとの間の隙間 */
+    gap: 20px;            /* ボタン同士に心地よい隙間を作る */
+    margin: -10px auto 35px auto; /* ヘッダーと下のコンテンツを繋ぐ絶妙な余白 */
     width: 100%;
 }
 
 .nav-card-btn {
-    flex: 1; /* 2つのボタンを50%ずつの均等な横幅にする */
-    background-color: #ffffff;
-    color: #1e3a8a;
+    flex: 1;
+    background: #ffffff;
+    color: #334155;       /* パキッとした青ではなく、高級感のあるダークグレー */
     border: 1px solid #e2e8f0;
     text-decoration: none;
-    padding: 16px;
+    padding: 20px 16px;   /* 上下を少しふっくらさせて押しやすく */
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;     /* 太すぎず細すぎない、今風の文字の太さ */
     font-size: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    border-radius: 16px;  /* 角をしっかり丸めて、柔らかく洗練された印象に */
+    
+    /* 💡 影を「2層」重ねることで、ベタ塗りではない、本物の立体感（浮き出し）を作ります */
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    
+    /* マウスを乗せたときの動きを滑らかにする設定 */
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.25s ease, 
+                border-color 0.25s ease, 
+                color 0.25s ease;
 }
 
-/* マウスを乗せたときにフワッと青く立体的に動く演出 */
+/* 💡 マウスを乗せた（ホバーした）ときの特別な演出 */
 .nav-card-btn:hover {
-    background-color: #eff6ff;
-    border-color: #3b82f6;
-    color: #2563eb;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.15);
+    color: #3b82f6;       /* 文字が爽やかなテックブルーに変わる */
+    border-color: #bfdbfe; /* 枠線が優しい薄青に変化 */
+    
+    /* フワッと上に4ピクセルだけ浮き上がる */
+    transform: translateY(-4px); 
+    
+    /* 浮き上がった分、影を深く、柔らかく広げてリアルな影を表現 */
+    box-shadow: 
+        0 20px 25px -5px rgba(59, 130, 246, 0.1), 
+        0 10px 10px -5px rgba(59, 130, 246, 0.04);
 }
 
-/* 📱 スマホで見るときは押しやすいように縦並びに自動切り替え */
+/* 📱 スマホで見るときはスマートな縦並びに自動切り替え */
 @media (max-width: 768px) {
     .top-nav-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        margin-top: 5px;
+    }
+    .nav-card-btn {
+        padding: 16px; /* スマホでは少しスリムにして画面に収まりやすく */
     }
 }
