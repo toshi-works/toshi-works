@@ -18,7 +18,7 @@ body {
 header {
     /* 📷 「header-bg.jpg」をご自身が用意した画像の名前に変えてください */
     /* 画像をアップロードするまでは、スタイリッシュなグラデーションの仮画像が表示されます */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('top_hero');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('top_hero.png');
     
     background-size: cover;      /* 画像をヘッダーの横幅いっぱいに綺麗に敷き詰める */
     background-position: center;  /* 画像の中心を基準に配置する */
