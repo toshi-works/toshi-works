@@ -2,7 +2,9 @@
    Toshi-Works 共通スタイルシート（style.css）
    ========================================================================== */
 
-/* 1. 全体の共通ベース設定 */
+/* --------------------------------------------------------------------------
+   1. 全体の共通ベース設定 ＆ ヘッダー
+   -------------------------------------------------------------------------- */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f8fafc;
@@ -12,41 +14,35 @@ body {
     line-height: 1.7;
 }
 
-/* ==========================================================================
-   1. 全体の共通ベース設定：ヘッダー画像背景版
-   ========================================================================== */
 header {
-    /* 📷 「header-bg.jpg」をご自身が用意した画像の名前に変えてください */
-    /* 画像をアップロードするまでは、スタイリッシュなグラデーションの仮画像が表示されます */
+    /* 📷 背景画像の指定 */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/top_hero.PNG');
-    
     background-size: cover;      /* 画像をヘッダーの横幅いっぱいに綺麗に敷き詰める */
     background-position: center;  /* 画像の中心を基準に配置する */
     background-repeat: no-repeat;
-    
-    /* ヘッダーの縦幅（厚み）の調整 */
     padding: 60px 20px;          /* 上下に60pxの広めの余白を作って、画像を見せます */
     text-align: center;
-    
-    /* 立体感のあるオシャレな影 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 立体感のあるオシャレな影 */
 }
 
 header h1 {
     margin: 0;
-    font-size: 28px;             /* 文字を少し大きめに */
-    color: #ffffff;              /* 💡 画像の上に載せるため、文字色を「白」に変えます */
+    font-size: 28px;
+    color: #ffffff;              /* 文字色を「白」に */
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 文字の後ろに薄い影を入れて、画像と重なっても読みやすくします */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 文字の後ろに薄い影を入れて読みやすく */
     letter-spacing: 1px;         /* 文字の間隔を少し広げてオシャレに */
 }
+
 .container {
     max-width: 850px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* 2. 基本のボックス（セクション・ストーリー共通） */
+/* --------------------------------------------------------------------------
+   2. 基本のボックス ＆ 共通パーツ
+   -------------------------------------------------------------------------- */
 .section-box, .story-box {
     background: #ffffff;
     border-radius: 12px;
@@ -85,8 +81,11 @@ header h1 {
     color: #475569;
 }
 
-/* 3. ボタン関連 */
-.link-btn, .visit-btn, .contact-btn {
+/* --------------------------------------------------------------------------
+   3. ボタン関連（共通 ＆ フッター戻るボタン）
+   -------------------------------------------------------------------------- */
+/* お問い合わせ等で使う標準ボタン */
+.link-btn, .contact-btn {
     display: inline-block;
     margin: 20px auto 10px auto;
     background-color: #3b82f6;
@@ -102,7 +101,7 @@ header h1 {
     cursor: pointer;
 }
 
-.link-btn:hover, .visit-btn:hover, .contact-btn:hover {
+.link-btn:hover, .contact-btn:hover {
     background-color: #2563eb;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(59, 130, 246, 0.25);
@@ -129,7 +128,9 @@ header h1 {
     margin-top: 40px;
 }
 
-/* 4. トップページ専用：メインビジュアル */
+/* --------------------------------------------------------------------------
+   4. トップページ専用：メインビジュアル
+   -------------------------------------------------------------------------- */
 .top-hero-banner {
     width: 100%;
     max-width: 100%;
@@ -153,7 +154,9 @@ header h1 {
     }
 }
 
-/* 5. お問い合わせページ専用：淡いブルーのボックス */
+/* --------------------------------------------------------------------------
+   5. お問い合わせページ専用：淡いブルーのボックス
+   -------------------------------------------------------------------------- */
 .contact-section {
     background: #f0f5ff;
     border: 1px solid #dbeafe; 
@@ -172,7 +175,132 @@ header h1 {
     font-weight: bold;
 }
 
-/* 6. 実績ページ（Works）専用：オシャレな区切りのカード */
+/* --------------------------------------------------------------------------
+   6. トップページ最上部：ナビゲーションボタン（極上モダン版）
+   -------------------------------------------------------------------------- */
+.top-nav-container {
+    display: flex;
+    gap: 20px;            /* ボタン同士に心地よい隙間を作る */
+    margin: -10px auto 35px auto; /* ヘッダーと下のコンテンツを繋ぐ絶妙な余白 */
+    width: 100%;
+}
+
+.nav-card-btn {
+    flex: 1;
+    background: #ffffff;
+    color: #334155;       /* 高級感のあるダークグレー */
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    padding: 20px 16px;   /* 上下を少しふっくらさせて押しやすく */
+    text-align: center;
+    font-weight: 600;     /* 太すぎず細すぎない、今風の文字の太さ */
+    font-size: 15px;
+    border-radius: 16px;  /* 角をしっかり丸めて、柔らかく洗練された印象に */
+    
+    /* 💡 影を「2層」重ねることで本物の立体感を作ります */
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    
+    /* マウスを乗せたときの動きを滑らかにする設定 */
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.25s ease, 
+                border-color 0.25s ease, 
+                color 0.25s ease;
+}
+
+/* マウスを乗せた（ホバーした）ときの特別な演出 */
+.nav-card-btn:hover {
+    color: #3b82f6;       /* 文字が爽やかなテックブルーに変わる */
+    border-color: #bfdbfe; /* 枠線が優しい薄青に変化 */
+    transform: translateY(-4px); /* フワッと上に4ピクセルだけ浮き上がる */
+    
+    box-shadow: 
+        0 20px 25px -5px rgba(59, 130, 246, 0.1), 
+        0 10px 10px -5px rgba(59, 130, 246, 0.04);
+}
+
+/* 📱 スマホ用：縦並びに自動切り替え */
+@media (max-width: 768px) {
+    .top-nav-container {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 5px;
+    }
+    .nav-card-btn {
+        padding: 16px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   7. トップページ：学習コンテンツの横並び・カードリンク設定
+   -------------------------------------------------------------------------- */
+.content-flex-container {
+    display: flex;
+    gap: 20px; 
+    width: 100%;
+}
+
+.content-card-link {
+    flex: 1; 
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none; 
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.content-card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+    border-color: #3b82f6; 
+}
+
+.content-card-img-box {
+    width: 100%;
+    height: 160px; 
+    overflow: hidden;
+}
+
+.content-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.content-card-text {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #1e3a8a; 
+    background-color: #f8fafc; 
+    border-top: 1px solid #e2e8f0;
+    transition: background-color 0.3s;
+}
+
+.content-card-link:hover .content-card-text {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+/* 📱 スマホ用：縦並びに自動切り替え */
+@media (max-width: 768px) {
+    .content-flex-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .content-card-img-box {
+        height: 180px; 
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8. 実績ページ（Works）専用：カードレイアウト
+   -------------------------------------------------------------------------- */
 .work-card {
     background: #ffffff;
     border-radius: 16px;
@@ -254,139 +382,33 @@ header h1 {
     display: inline-block;
 }
 
-/* ==========================================================================
-   7. トップページ：学習コンテンツの横並び・カードリンク設定
-   ========================================================================== */
-/* 2つのカードを横並びにする指示 */
-.content-flex-container {
-    display: flex;
-    gap: 20px; 
-    width: 100%;
-}
-
-/* 一体化してクリックできるようにするカードの土台 */
-.content-card-link {
-    flex: 1; 
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none; 
-    display: block;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-/* カード全体にマウスを乗せたときの「浮き上がる」動き */
-.content-card-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
-    border-color: #3b82f6; 
-}
-
-/* カード内の画像の設定 */
-.content-card-img-box {
-    width: 100%;
-    height: 160px; 
-    overflow: hidden;
-}
-
-.content-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
-
-/* 画像の下の「文字列」のオシャレな装飾 */
-.content-card-text {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-    color: #1e3a8a; 
-    background-color: #f8fafc; 
-    border-top: 1px solid #e2e8f0;
-    transition: background-color 0.3s;
-}
-
-/* マウスを乗せたときに文字の背景を少し明るく */
-.content-card-link:hover .content-card-text {
-    background-color: #eff6ff;
-    color: #2563eb;
-}
-
-/* 📱 スマホで見るときは縦並びに自動切り替え */
-@media (max-width: 768px) {
-    .content-flex-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .content-card-img-box {
-        height: 180px; 
-    }
-}
-/* ==========================================================================
-   8. トップページ最上部：ナビゲーションボタン横並び設定（極上モダン版）
-   ========================================================================== */
-.top-nav-container {
-    display: flex;
-    gap: 20px;            /* ボタン同士に心地よい隙間を作る */
-    margin: -10px auto 35px auto; /* ヘッダーと下のコンテンツを繋ぐ絶妙な余白 */
-    width: 100%;
-}
-
-.nav-card-btn {
-    flex: 1;
-    background: #ffffff;
-    color: #334155;       /* パキッとした青ではなく、高級感のあるダークグレー */
-    border: 1px solid #e2e8f0;
+/* 💡 修正：実績カード内のリンクボタン（シックなモノトーン版） */
+.visit-btn {
+    display: inline-block;
+    background-color: #475569; /* 高級感のあるスレートグレー */
+    color: #ffffff;
     text-decoration: none;
-    padding: 20px 16px;   /* 上下を少しふっくらさせて押しやすく */
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-top: 20px;
     text-align: center;
-    font-weight: 600;     /* 太すぎず細すぎない、今風の文字の太さ */
-    font-size: 15px;
-    border-radius: 16px;  /* 角をしっかり丸めて、柔らかく洗練された印象に */
-    
-    /* 💡 影を「2層」重ねることで、ベタ塗りではない、本物の立体感（浮き出し）を作ります */
-    box-shadow: 
-        0 4px 6px -1px rgba(0, 0, 0, 0.05), 
-        0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    
-    /* マウスを乗せたときの動きを滑らかにする設定 */
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.25s ease, 
-                border-color 0.25s ease, 
-                color 0.25s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
 }
 
-/* 💡 マウスを乗せた（ホバーした）ときの特別な演出 */
-.nav-card-btn:hover {
-    color: #3b82f6;       /* 文字が爽やかなテックブルーに変わる */
-    border-color: #bfdbfe; /* 枠線が優しい薄青に変化 */
-    
-    /* フワッと上に4ピクセルだけ浮き上がる */
-    transform: translateY(-4px); 
-    
-    /* 浮き上がった分、影を深く、柔らかく広げてリアルな影を表現 */
-    box-shadow: 
-        0 20px 25px -5px rgba(59, 130, 246, 0.1), 
-        0 10px 10px -5px rgba(59, 130, 246, 0.04);
+.visit-btn:hover {
+    background-color: #334155; /* 深みのあるチャコールグレーに変化 */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 📱 スマホで見るときはスマートな縦並びに自動切り替え */
-@media (max-width: 768px) {
-    .top-nav-container {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 5px;
-    }
-    .nav-card-btn {
-        padding: 16px; /* スマホでは少しスリムにして画面に収まりやすく */
-    }
-}
-/* ==========================================================================
-   10. コードブロック（Pythonコード表示用）のスタイリング
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   9. コードブロック（Pythonコード表示用）
+   -------------------------------------------------------------------------- */
 .code-container {
     margin: 20px 0;
     background-color: #1e293b; /* ダークモード風の洗練された濃いグレー */
@@ -395,7 +417,6 @@ header h1 {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* コードブロック上部のバー（ファイル名表示エリア） */
 .code-header {
     background-color: #0f172a; /* 枠よりさらに一段暗い色で引き締める */
     padding: 10px 16px;
@@ -405,17 +426,16 @@ header h1 {
     border-bottom: 1px solid #334155;
 }
 
-/* コード本文を囲むエリア（ここで「いい感じのスペース」を作ります） */
 .code-container pre {
     margin: 0;
     padding: 18px 20px;
     overflow-x: auto;   /* 横スクロール */
     
-    /* 👇 コードが長すぎる場合に縦スクロールにしたい時は、この2行を追加 */
-    max-height: 400px;  /* 縦幅の上限を400pxに制限する */
-    overflow-y: auto;   /* 400pxを超えたら、枠内で縦スクロールさせる */
+    /* 💡 長いコード対策：400pxを超えたら枠内で縦スクロールさせる設定 */
+    max-height: 400px;  
+    overflow-y: auto;   
 }
-/* コードの文字そのものの設定 */
+
 .code-container code {
     color: #38bdf8;       /* Pythonのコードが映える、爽やかなライトブルー */
     font-family: 'Consolas', 'Monaco', 'Courier New', Courier, monospace; /* プログラミング専用フォント */
