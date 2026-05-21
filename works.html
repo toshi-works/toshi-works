@@ -53,27 +53,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </ul>
 
                     
-                    <div class="code-container">
-                    <div class="code-header">
-                    <span>result_03.py</span> </div>
-    <pre><code>#記入例
-                import pandas as pd
-                from sklearn.linear_model import LinearRegression
-
-# データの読み込み
-data = pd.read_csv('california_housing.csv')
-
-# 重回帰分析の実行
-X = data[['MedInc', 'HouseAge', 'AveRooms']]
-y = data['MedHouseValue']
-
-model = LinearRegression()
-model.fit(X, y)
-
-print(f'決定係数: {model.score(X, y):.4f}')
-    
-</code></pre>
-</div>
+                   </div>
 
                     
                 </div> </div> </div>
