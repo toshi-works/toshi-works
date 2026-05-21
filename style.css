@@ -384,3 +384,43 @@ header h1 {
         padding: 16px; /* スマホでは少しスリムにして画面に収まりやすく */
     }
 }
+/* ==========================================================================
+   10. コードブロック（Pythonコード表示用）のスタイリング
+   ========================================================================== */
+.code-container {
+    margin: 20px 0;
+    background-color: #1e293b; /* ダークモード風の洗練された濃いグレー */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* コードブロック上部のバー（ファイル名表示エリア） */
+.code-header {
+    background-color: #0f172a; /* 枠よりさらに一段暗い色で引き締める */
+    padding: 10px 16px;
+    color: #94a3b8;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px solid #334155;
+}
+
+/* コード本文を囲むエリア（ここで「いい感じのスペース」を作ります） */
+.code-container pre {
+    margin: 0;
+    padding: 18px 20px;
+    overflow-x: auto;   /* 横スクロール */
+    
+    /* 👇 コードが長すぎる場合に縦スクロールにしたい時は、この2行を追加 */
+    max-height: 400px;  /* 縦幅の上限を400pxに制限する */
+    overflow-y: auto;   /* 400pxを超えたら、枠内で縦スクロールさせる */
+}
+/* コードの文字そのものの設定 */
+.code-container code {
+    color: #38bdf8;       /* Pythonのコードが映える、爽やかなライトブルー */
+    font-family: 'Consolas', 'Monaco', 'Courier New', Courier, monospace; /* プログラミング専用フォント */
+    font-size: 14px;
+    line-height: 1.6;     /* 行と行の間のスペースを広げて読みやすく */
+    text-align: left;
+    display: block;
+}
