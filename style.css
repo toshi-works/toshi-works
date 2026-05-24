@@ -444,3 +444,51 @@ header h1 {
     text-align: left;
     display: block;
 }
+
+/* --- カテゴリータグ用のスタイル（新設） --- */
+.work-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;            /* 日付とタグの間の隙間 */
+    margin-bottom: 20px;  /* 本文との間の余白 */
+    flex-wrap: wrap;      /* スマホ画面で溢れたら自動で折り返す */
+}
+
+.work-tags {
+    display: flex;
+    gap: 8px;             /* タグ同士の隙間 */
+}
+
+/* タグ共通のベースデザイン（丸み、文字サイズなど） */
+.work-tags span {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;  /* カプセル型の丸み */
+}
+
+/* 💡 テーマごとの色分け設定（お好みの色に調整可能です） */
+.tag-python {
+    background-color: #ffeaa7; /* 優しい黄色 */
+    color: #d63031;
+}
+
+.tag-stats {
+    background-color: #dff9fb; /* 優しい水色 */
+    color: #130cb7;
+}
+
+.tag-ga4 {
+    background-color: #ffe4e1; /* 優しいピンク */
+    color: #c71585;
+}
+
+.tag-gas {
+    background-color: #e8f5e9; /* 優しい薄緑 */
+    color: #2e7d32;
+}
+
+.tag-looker {
+    background-color: #f3e5f5; /* 優しい薄紫 */
+    color: #6a1b9a;
+}
