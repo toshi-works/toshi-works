@@ -3,7 +3,7 @@ data/
 # 特定のフォルダの中身を無視
 images/practice/data/
 # 秘密ファイルをピンポイントでどこにあっても無視（超重要）
-.env
+**/.env
 # Pythonが自動生成する不要なキャッシュファイルを無視
 __pycache__/
 *.pyc
