@@ -7,6 +7,9 @@ images/practice/data/
 # Pythonが自動生成する不要なキャッシュファイルを無視
 __pycache__/
 *.pyc
-
+*.json
+*.XLSX
+*.xlsx
 # すべてのCSVファイルをGitHubの追跡対象外にする
 *.csv
+*.CSV
